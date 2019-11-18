@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bug list</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>These are my bugs!</h1>
+<table>
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Title </th>
+        <th> Status </th>
+        <th> Created </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${bugs.empty}">
+        <td colspan="4"> No Bugs Available </td>
+    </tr>
+    <tr th:each="bug : ${bugs}">
+        <td><span th:text="${bug.id}"> </span></td>
+        <td><span th:text="${bug.title}"> </span></td>
+        <td><span th:text="${bug.status}"> </span></td>
+        <td><span th:text="${bug.created}"> </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
