@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Bugs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1> Edit Bugs </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-info" href="#" th:href="@{/bugs}"> Back to All Bugs </a>
+            <form action="#" class="form-horizontal"
+                  th:action="@{/bugs/save}"
+                  th:object="${form}"[
+                  method="post">
+                <fieldset>
+					<span class="pull-right">
+						    <input type="submit" id="submitButton" class="btn btn-success" th:value="Save">
+						    <input type="reset" id="resetButton" class="btn btn-danger" th:value="Reset"/>
+					</span>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th> ID </th>
+                            <th> Title </th>
+                            <th> Status </th>
+                            <th> Created </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="book, itemStat : ${form.books}">
+                            <td><input hidden th:name="|bugs[${itemStat.index}].id|" th:value="${bug.getId()}"/></td>
+                            <td><input th:placeholder="ID + ' ' + ${itemStat.count}" th:name="|bugs[${itemStat.index}].id|"
+                                       th:value="${bug.getId()}" required/></td>
+                            <td><input th:placeholder="Title + ' ' + ${itemStat.count}" th:name="|bugs[${itemStat.index}].title|"
+                                       th:value="${bug.getTitle()}" required/></td>
+                            <td><input th:placeholder="Status + ' ' + ${itemStat.count}" th:name="|bugs[${itemStat.index}].status|"
+                                       th:value="${bug.getStatus()}" required/></td>
+                            <td><input th:placeholder="Created + ' ' + ${itemStat.count}" th:name="|bugs[${itemStat.index}].created|"
+                                       th:value="${bug.getCreated()}" required/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
