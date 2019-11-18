@@ -25,6 +25,7 @@ public class BugsController {
         return "bugs";
     }
 
+    // aka database
     static Bug[] bugsList = {
             new Bug(1, BugStatus.NEW,"Vse ploxo", "Apr 2019"),
             new Bug(2, BugStatus.CLOSED,"Tak sebe", "Sep 2019"),
