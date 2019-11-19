@@ -8,7 +8,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>These are my bugs!</h1>
+            <h1>
+                <img src="../static/images/bug2.png" width="40" th:src="@{images/bug2.png}"/>
+                These are my bugs!
+            </h1>
         </div>
     </div>
     <div class="row">
@@ -16,7 +19,6 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th> ID </th>
                     <th> Title </th>
                     <th> Status </th>
                     <th> Created </th>
@@ -27,7 +29,6 @@
                     <td colspan="4"> No Bugs Available </td>
                 </tr>
                 <tr th:each="bug : ${bugs}">
-                    <td><span th:text="${bug.id}"> </span></td>
                     <td><span th:text="${bug.title}"> </span></td>
                     <td><span th:text="${bug.status}"> </span></td>
                     <td><span th:text="${bug.created}"> </span></td>
