@@ -70,11 +70,14 @@ public class BugsController {
 
     // aka database
 //    static Bug[] bugsList = {
-//            new Bug(1, BugStatus.NEW,"Vse ploxo", "Apr 2019"),
+//            new Bug(1, BugStatus.NEW,"Gde ya", "Apr 2019"),
 //            new Bug(2, BugStatus.CLOSED,"Tak sebe", "Sep 2019"),
 //            new Bug(3, BugStatus.FIXED,"Zashibis", "Oct 2019"),
-//            new Bug(4, BugStatus.FIXED,"Ok", "Mar 2021"),
-//            new Bug(5, BugStatus.WONT_FIX,"Bodun", "Dec 1997"),
+//            new Bug(4, BugStatus.FIXED,"Proizvol", "Mar 2021"),
+//            new Bug(5, BugStatus.WONT_FIX,"Vikusi nakusi", "Dec 1835"),
+//            new Bug(6, BugStatus.WONT_FIX,"Da kak zhe tak", "Dec 2000"),
+//            new Bug(7, BugStatus.WONT_FIX,"Chto proishodit", "Dec 2510"),
+//            new Bug(8, BugStatus.WONT_FIX,"Bodun", "Dec 1997"),
 //    };
 
 }
